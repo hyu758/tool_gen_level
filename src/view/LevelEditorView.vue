@@ -73,14 +73,12 @@ onMounted(() => {
   axios.get(`${API_URL}/api/categories`)
     .then(response => {
       categories.value = response.data
-      console.log('Response categories:', response.data)
     })
     .catch(error => console.error('Error fetching categories:', error))
 
   axios.get(`${API_URL}/api/words`)
     .then(response => {
       words.value = response.data
-      console.log('Response words:', response.data)
     })
     .catch(error => console.error('Error fetching words:', error))
 
@@ -100,7 +98,7 @@ const fullPhrase = ref('')
 const copyright = ref('')
 const wordCount = ref(1)
 const selectedCategoryId = ref('')
-const nextId = ref(1) // Sử dụng kiểu number trực tiếp thay vì chuỗi
+const nextId = ref(1)
 
 const remainingLetters = ref(new Set())
 const priorityCandidates = reactive(new Map())
