@@ -225,20 +225,26 @@
     colors.value.keysBackgroundColor = rgbToHex(newCategory.value.KeysBackgroundColor)
     colors.value.keysColor = rgbToHex(newCategory.value.KeysColor)
     
+    await fetchCategories();
+  })
+  async function fetchCategories() {
     try {
       const response = await fetch(`${API_URL}/api/categories`)
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
       categories.value = await response.json()
     } catch (error) {
       console.error('Error fetching categories:', error)
       alert('Failed to load categories')
     }
-  })
-  
+  }
   const saveCategory = async () => {
     try {
-      const maxId = categories.value.length > 0 ? Math.max(...categories.value.map(cat => parseInt(cat.Id))) : 0;
+      const maxId = categories.value.length > 0 ? Math.max(...categories.value.map(cat => cat.Id)) : 0;
+      console.log('Max ID:', maxId);
       newCategory.value.Id = maxId + 1;
-  
+      
       const response = await fetch(`${API_URL}/api/save-category`, {
         method: 'POST',
         headers: {
@@ -247,7 +253,7 @@
         body: JSON.stringify(newCategory.value)
       })
   
-      if (!response.status === 200) {
+      if (!response.status === 201) {
         throw new Error('Failed to save category')
       }
   
@@ -270,7 +276,7 @@
         keysBackgroundColor: '#E9DAFF',
         keysColor: '#E983FF'
       }
-  
+      await fetchCategories();
       alert('Category saved successfully!')
     } catch (error) {
       console.error('Error saving category:', error)
