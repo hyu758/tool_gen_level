@@ -117,7 +117,9 @@
   
   <script setup>
   import { ref, computed, watch, onMounted } from 'vue'
-  
+  import { useToast } from 'vue-toast-notification'
+
+  const toast = useToast()
   const categories = ref([])
   const currentPage = ref(1)
   const itemsPerPage = ref(10)
@@ -253,31 +255,29 @@
         body: JSON.stringify(newCategory.value)
       })
   
-      if (!response.status === 201) {
-        throw new Error('Failed to save category')
+      if (response.status === 201) {
+          newCategory.value = {
+            Id: '',
+            Name: '',
+            Placeholder: '',
+            BackgroundColor: '233,131,255',
+            KeysBackgroundColor: '233,218,255',
+            KeysColor: '233,131,255'
+          }
+
+          colors.value = {
+            backgroundColor: '#E983FF',
+            keysBackgroundColor: '#E9DAFF',
+            keysColor: '#E983FF'
+          }
+          await fetchCategories();
+          toast.success('Category saved successfully!', {
+            position: 'top-right',
+            duration: 3000
+          })
       }
-  
-      const savedCategory = await response.json()
-      categories.value.push(savedCategory)
-  
-      // Reset form
-      newCategory.value = {
-        Id: '',
-        Name: '',
-        Placeholder: '',
-        BackgroundColor: '233,131,255',
-        KeysBackgroundColor: '233,218,255',
-        KeysColor: '233,131,255'
-      }
-  
-      // Reset color pickers
-      colors.value = {
-        backgroundColor: '#E983FF',
-        keysBackgroundColor: '#E9DAFF',
-        keysColor: '#E983FF'
-      }
-      await fetchCategories();
-      alert('Category saved successfully!')
+    
+
     } catch (error) {
       console.error('Error saving category:', error)
       alert('Failed to save category')
