@@ -1,0 +1,409 @@
+[
+  {
+    "Id": "1",
+    "PhraseSymbolList": "HUMANS HAVE GENES",
+    "FullPhrase": "Humans have genes from other species, which consists of as many as 145 genes from bacteria, fungi and viruses.",
+    "CategoryId": "1",
+    "Copyright": "-- Interesting fact",
+    "Words": [
+      {
+        "WordSymbolList": "MEANS",
+        "Description": "If it _____ that much to you, there is a way."
+      },
+      {
+        "WordSymbolList": "HUGE",
+        "Description": "His eyes looked ____ when he was scared."
+      },
+      {
+        "WordSymbolList": "HAVE",
+        "Description": "To be in possession of.  already had a car."
+      },
+      {
+        "WordSymbolList": "HAS",
+        "Description": "___ anybody ever told you that you're beautiful?"
+      },
+      {
+        "WordSymbolList": "SAME",
+        "Description": "It's always the ____, chauncey."
+      },
+      {
+        "WordSymbolList": "EVEN",
+        "Description": "You always look neat and clean - ____ if you are a little out of style."
+      },
+      {
+        "WordSymbolList": "MAN",
+        "Description": "He didn't look like a rich ___, but then, what did a rich ___ look like?"
+      },
+      {
+        "WordSymbolList": "MEN",
+        "Description": "I want to know what you ___ are like."
+      },
+      {
+        "WordSymbolList": "NAME",
+        "Description": "A word or phrase by which an individual person, place, or thing, or a class of things, is known, called, or spoken of."
+      },
+      {
+        "WordSymbolList": "HUMAN",
+        "Description": "A person."
+      },
+      {
+        "WordSymbolList": "AGE",
+        "Description": "A period of time considered in terms of noteworthy and characteristic events, developments, persons, etc."
+      }
+    ]
+  },
+  {
+    "Id": "2",
+    "PhraseSymbolList": "A CLOUD CAN WEIGH",
+    "FullPhrase": "A cloud can weigh around a million pounds. That’s about as heavy as the world’s largest jet when it’s completely full of cargo and passengers.",
+    "CategoryId": "1",
+    "Copyright": "Interesting fact",
+    "Words": [
+      {
+        "WordSymbolList": "GUIDANCE",
+        "Description": "The act of guiding; direction; leadership."
+      },
+      {
+        "WordSymbolList": "HOLLOW",
+        "Description": "Depressed below the surrounding surface; shaped like a cup or bowl; concave."
+      },
+      {
+        "WordSymbolList": "COULD",
+        "Description": "Used with hypothetical or conditional force.  if we _____ help, we would."
+      },
+      {
+        "WordSymbolList": "EACH",
+        "Description": "Every one of a group considered individually; ____ one."
+      },
+      {
+        "WordSymbolList": "LONG",
+        "Description": "Having relatively great height; tall."
+      },
+      {
+        "WordSymbolList": "DOWN",
+        "Description": "Toward, to, or on the ground, floor, or bottom.  tripped and fell ____."
+      },
+      {
+        "WordSymbolList": "LINE",
+        "Description": "A crease in the skin, especially on the face; a wrinkle."
+      }
+    ]
+  },
+  {
+    "Id": "3",
+    "PhraseSymbolList": "SOMEBODY TELLS YOU TO BREAK A LEG",
+    "FullPhrase": "If you are an actor or musician, somebody tells you to break a leg before getting onto the stage for good luck.",
+    "CategoryId": "3",
+    "Copyright": "-- idioms",
+    "Words": [
+      {
+        "WordSymbolList": "ABSOLUTE",
+        "Description": "Ideal is defined as something or someone who is thought of as a perfect example of something."
+      },
+      {
+        "WordSymbolList": "REMEDY",
+        "Description": "Something, such as a drug or a bandage, that is used to treat a symptom, disease, injury, or other condition.    medicine"
+      },
+      {
+        "WordSymbolList": "GREAT",
+        "Description": "Of much more than ordinary size, extent, volume, etc."
+      },
+      {
+        "WordSymbolList": "MARKET",
+        "Description": "A standing commitment to buy and sell a given security at stated prices.  a brokerage that made a ______ in the company's stock."
+      },
+      {
+        "WordSymbolList": "ABOUT",
+        "Description": "Approximately; nearly.  the interview lasted _____ an hour."
+      },
+      {
+        "WordSymbolList": "SYSTEM",
+        "Description": "A set or arrangement of things so related or connected as to form a unity or organic whole.  a solar ______, school ______, ______ of highways."
+      },
+      {
+        "WordSymbolList": "LARGE",
+        "Description": "Of greater than average scope, breadth, or capacity; comprehensive."
+      },
+      {
+        "WordSymbolList": "BOARD",
+        "Description": "A flat piece of wood or similar material, often rectangular, for some special use.  a checkerboard, bulletin _____, ironing _____, diving _____."
+      },
+      {
+        "WordSymbolList": "STUDY",
+        "Description": "An act or effort made in the pursuit of knowledge.  applied himself to his studies."
+      },
+      {
+        "WordSymbolList": "TABLE",
+        "Description": "Such a _____ set with food for a meal."
+      },
+      {
+        "WordSymbolList": "EARLY",
+        "Description": "Of or occurring near the beginning of a given series, period of time, or course of events.  in the _____ morning; scored two runs in the _____ innings."
+      },
+      {
+        "WordSymbolList": "RESULT",
+        "Description": "To happen or issue as a consequence or effect.  floods resulting from heavy rains."
+      },
+      {
+        "WordSymbolList": "MATTER",
+        "Description": "What a thing is made of; constituent substance or material."
+      }
+    ]
+  },
+  {
+    "Id": "4",
+    "PhraseSymbolList": "LILIES ARE HIGHLY TOXIC TO CATS AND DOGS, AND SHOULD BE KEPT AWAY FROM THEM",
+    "FullPhrase": "Lilies are highly toxic to cats and dogs, and should be kept away from them. Even sniffing it can cause toxic shock in your pet, while eating just a tiny bit of it can result in a serious illness",
+    "CategoryId": "13",
+    "Copyright": "-- Fact about flora",
+    "Words": [
+      {
+        "WordSymbolList": "CHILDREN",
+        "Description": "They had two adopted ________ already."
+      },
+      {
+        "WordSymbolList": "BOASTFUL",
+        "Description": "Versatile, lighthearted, ________ and pleasure-loving, he contrasts with the nobler and more intellectual character of averroes."
+      },
+      {
+        "WordSymbolList": "MANPOWER",
+        "Description": "Power furnished by human physical strength."
+      },
+      {
+        "WordSymbolList": "STRONGLY",
+        "Description": "In a strong or powerful manner.  in the third race, renowned blaze finished ________ to show, paying six dollars."
+      },
+      {
+        "WordSymbolList": "BREAKING",
+        "Description": "The change of a simple vowel to a diphthong, especially in various germanic languages, often caused by the influence of neighboring consonants."
+      },
+      {
+        "WordSymbolList": "RELAXING",
+        "Description": "Having a quality whereby it is easy to relax when subjected to it."
+      },
+      {
+        "WordSymbolList": "INDUSTRY",
+        "Description": "A sector of an economy.  the advertising ________."
+      },
+      {
+        "WordSymbolList": "PERSONAL",
+        "Description": "Of or peculiar to a certain person; private; individual."
+      },
+      {
+        "WordSymbolList": "SECURITY",
+        "Description": "Freedom from risk or danger; safety."
+      },
+      {
+        "WordSymbolList": "PHYSICAL",
+        "Description": "Having a physiological basis or origin.  a ________ craving for an addictive drug.  medicine"
+      },
+      {
+        "WordSymbolList": "HOSPITAL",
+        "Description": "A place of shelter and rest for travelers, etc."
+      },
+      {
+        "WordSymbolList": "CONSIDER",
+        "Description": "To think carefully about (something), especially before making a decision;  i needed more time to ________ my options. we considered taking the train instead of the bus."
+      },
+      {
+        "WordSymbolList": "DIRECTLY",
+        "Description": "With nothing or no one between.  ________ responsible."
+      },
+      {
+        "WordSymbolList": "SOUTHERN",
+        "Description": "The heavy ________ day reminded her of the caribbean."
+      },
+      {
+        "WordSymbolList": "COMPUTER",
+        "Description": "A device used for computing and otherwise processing information; specif., an electronic machine which, by means of stored instructions and information, is used to perform rapid, often complex calculations, compile and correlate data, download and play audio and video communications, access the world wide web, send and receive e-mail, etc.; now, esp., digital ________."
+      },
+      {
+        "WordSymbolList": "THOUSAND",
+        "Description": "I have over three ________ acres."
+      },
+      {
+        "WordSymbolList": "DISTANCE",
+        "Description": "The fact or condition of being separated or removed in space or time; remoteness."
+      },
+      {
+        "WordSymbolList": "RELATION",
+        "Description": "What is narrated or told; account; recital."
+      },
+      {
+        "WordSymbolList": "PURCHASE",
+        "Description": "To obtain for money or by paying a price; buy."
+      },
+      {
+        "WordSymbolList": "DOMESTIC",
+        "Description": "Having to do with the home or housekeeping; of the house or family.  ________ joys."
+      }
+    ]
+  },
+  {
+    "Id": "5",
+    "PhraseSymbolList": "A BLESSING IN DISGUISE",
+    "FullPhrase": "Something that seems bad or unlucky at first, but results in something good happening later.",
+    "CategoryId": "3",
+    "Copyright": "-- Common English idiom",
+    "Words": [
+      {
+        "WordSymbolList": "BUILDING",
+        "Description": "Anything that is built with walls and a roof, as a house or factory; structure."
+      },
+      {
+        "WordSymbolList": "DISEASE",
+        "Description": "A particular destructive process in an organ or organism, with a specific cause and characteristic symptoms; specif., an illness; ailment."
+      },
+      {
+        "WordSymbolList": "BEING",
+        "Description": "The state or quality of having existence.  technical advances that have only recently come into _____."
+      },
+      {
+        "WordSymbolList": "LINE",
+        "Description": "A crease in the skin, especially on the face; a wrinkle."
+      },
+      {
+        "WordSymbolList": "LAND",
+        "Description": "A specific part of the earth's surface."
+      },
+      {
+        "WordSymbolList": "AGAIN",
+        "Description": "To a previous place, position, or state.  left home but went back _____."
+      },
+      {
+        "WordSymbolList": "SIDE",
+        "Description": "Any of the lines or surfaces that bound or limit something.  a square has four sides, a cube six."
+      },
+      {
+        "WordSymbolList": "BASIS",
+        "Description": "The base, foundation, or chief supporting factor of anything."
+      }
+    ]
+  },
+  {
+    "Id": "6",
+    "PhraseSymbolList": "BE THE CHANGE YOU WISH TO SEE IN THE WORLD",
+    "FullPhrase": "Be the change you wish to see in the world — a quote attributed to Mahatma Gandhi about personal responsibility.",
+    "CategoryId": "2",
+    "Copyright": "-- Mahatma Gandhi quote",
+    "Words": [
+      {
+        "WordSymbolList": "CHILDREN",
+        "Description": "They had two adopted ________ already."
+      },
+      {
+        "WordSymbolList": "ABSOLUTE",
+        "Description": "Unqualified in extent or degree; total.  ________ silence."
+      },
+      {
+        "WordSymbolList": "HIGHWAY",
+        "Description": "A main road; thoroughfare, specif. one maintained by a state or federal government and designed to accommodate a heavy traffic flow."
+      },
+      {
+        "WordSymbolList": "SHOULD",
+        "Description": "It ______ be ready now."
+      },
+      {
+        "WordSymbolList": "THROUGH",
+        "Description": "Soldiers were marching _______ the fields."
+      },
+      {
+        "WordSymbolList": "GENERAL",
+        "Description": "Of, for, or applying to a whole genus, kind, class, order, or race.  the _______ classifications of matter."
+      },
+      {
+        "WordSymbolList": "BECAUSE",
+        "Description": "For the reason that; since."
+      },
+      {
+        "WordSymbolList": "DURING",
+        "Description": "At some point in the entire time of; in the course of.  he left ______ the lecture."
+      },
+      {
+        "WordSymbolList": "SECTION",
+        "Description": "Does any _______ of science consider time travel a possibility?"
+      },
+      {
+        "WordSymbolList": "NATIONAL",
+        "Description": "Of or relating to views about social relationships that involve power or authority."
+      },
+      {
+        "WordSymbolList": "AGAINST",
+        "Description": "In a direction or course opposite to.  row _______ the current."
+      },
+      {
+        "WordSymbolList": "ANOTHER",
+        "Description": "Distinctly different from the first.  took _______ route to town."
+      },
+      {
+        "WordSymbolList": "COUNTY",
+        "Description": "The largest administrative division of most states in the united states."
+      },
+      {
+        "WordSymbolList": "CONTROL",
+        "Description": "To direct the course of; steer:"
+      },
+      {
+        "WordSymbolList": "RESEARCH",
+        "Description": "Careful, systematic, patient study and investigation in some field of knowledge, undertaken to discover or establish facts or principles."
+      }
+    ]
+  },
+  {
+    "Id": "7",
+    "PhraseSymbolList": "THE LONGEST NATIONAL ANTHEM IN THE WORLD COMES FROM GREECE",
+    "FullPhrase": "The longest national anthem in the world comes from Greece: a whopping 158 verses",
+    "CategoryId": "17",
+    "Copyright": "-- Fact about music",
+    "Words": [
+      {
+        "WordSymbolList": "CHILDREN",
+        "Description": "The definition of ________ means more than one child.  an example of ________ is the group of two year olds playing at the park. yourdictionary"
+      },
+      {
+        "WordSymbolList": "SOMEWHAT",
+        "Description": "Some degree, amount, portion, or part; a bit.  ________ of a surprise."
+      },
+      {
+        "WordSymbolList": "FOREIGN",
+        "Description": "Situated outside one's own country, province, locality, etc.  _______ lands."
+      },
+      {
+        "WordSymbolList": "GENERAL",
+        "Description": "Life in _______ was going down hill for her then."
+      },
+      {
+        "WordSymbolList": "SECTION",
+        "Description": "A subdivision of a written work."
+      },
+      {
+        "WordSymbolList": "NATIONAL",
+        "Description": "Of or relating to views about social relationships that involve power or authority."
+      },
+      {
+        "WordSymbolList": "AGAINST",
+        "Description": "In contact with"
+      },
+      {
+        "WordSymbolList": "ANOTHER",
+        "Description": "One more; an additional.  have _______ cup of tea."
+      },
+      {
+        "WordSymbolList": "CONTROL",
+        "Description": "To exercise authority over; direct; command."
+      },
+      {
+        "WordSymbolList": "RESEARCH",
+        "Description": "An act or period of such study.  her researches of medieval parish records."
+      },
+      {
+        "WordSymbolList": "INTEREST",
+        "Description": "Something, such as a quality, subject, or activity, that evokes this mental state.  counts the theater among his interests."
+      },
+      {
+        "WordSymbolList": "FEDERAL",
+        "Description": "Of or formed by a compact; specif., designating or of a union of states, groups, etc. in which each member agrees to subordinate its governmental power to that of the central authority in certain specified common affairs."
+      }
+    ]
+  }
+]

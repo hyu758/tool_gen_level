@@ -1,0 +1,210 @@
+[
+  {
+    "Id": "0",
+    "Name": "RareLevel",
+    "Placeholder": "UnknownFacts",
+    "BackgroundColor": "233,131,255",
+    "KeysBackgroundColor": "233,218,255",
+    "KeysColor": "233,131,255"
+  },
+  {
+    "Id": "1",
+    "Name": "Fundamental",
+    "Placeholder": "Fundamental",
+    "BackgroundColor": "80,200,119",
+    "KeysBackgroundColor": "224,251,232",
+    "KeysColor": "80,200,119"
+  },
+  {
+    "Id": "2",
+    "Name": "Great Minds",
+    "Placeholder": "GreatMinds",
+    "BackgroundColor": "248,140,181",
+    "KeysBackgroundColor": "255,237,244",
+    "KeysColor": "251,169,200"
+  },
+  {
+    "Id": "3",
+    "Name": "Quotes & Sayings",
+    "Placeholder": "Quotes & Sayings",
+    "BackgroundColor": "255,194,74",
+    "KeysBackgroundColor": "255,243,221",
+    "KeysColor": "255,194,74"
+  },
+  {
+    "Id": "4",
+    "Name": "Historical facts",
+    "Placeholder": "HistoricalEvents",
+    "BackgroundColor": "239,174,105",
+    "KeysBackgroundColor": "255,238,220",
+    "KeysColor": "239,174,105"
+  },
+  {
+    "Id": "5",
+    "Name": "Universe",
+    "Placeholder": "Universe",
+    "BackgroundColor": "76,196,253",
+    "KeysBackgroundColor": "213,242,255",
+    "KeysColor": "43,169,229"
+  },
+  {
+    "Id": "6",
+    "Name": "Animals",
+    "Placeholder": "Animals",
+    "BackgroundColor": "145,193,70",
+    "KeysBackgroundColor": "224,246,189",
+    "KeysColor": "145,193,70"
+  },
+  {
+    "Id": "7",
+    "Name": "Economics & Politics",
+    "Placeholder": "EconomicsPolitics",
+    "BackgroundColor": "130,200,254",
+    "KeysBackgroundColor": "228,244,255",
+    "KeysColor": "130,200,254"
+  },
+  {
+    "Id": "8",
+    "Name": "Mother Earth",
+    "Placeholder": "MotherEarth",
+    "BackgroundColor": "55,225,194",
+    "KeysBackgroundColor": "218,255,255",
+    "KeysColor": "40,203,173"
+  },
+  {
+    "Id": "9",
+    "Name": "Game & Sports",
+    "Placeholder": "Game & Sports",
+    "BackgroundColor": "255,132,71",
+    "KeysBackgroundColor": "255,240,218",
+    "KeysColor": "255,132,71"
+  },
+  {
+    "Id": "10",
+    "Name": "Food & Drinks",
+    "Placeholder": "Food & Drinks",
+    "BackgroundColor": "242,162,58",
+    "KeysBackgroundColor": "255,243,225",
+    "KeysColor": "242,162,58"
+  },
+  {
+    "Id": "11",
+    "Name": "Culture & History",
+    "Placeholder": "Culture & History",
+    "BackgroundColor": "252,203,71",
+    "KeysBackgroundColor": "255,237,187",
+    "KeysColor": "252,203,71"
+  },
+  {
+    "Id": "12",
+    "Name": "Music & Art",
+    "Placeholder": "Music & Art",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "211,249,255",
+    "KeysColor": "54,201,225"
+  },
+  {
+    "Id": "13",
+    "Name": "Plants",
+    "Placeholder": "Plants",
+    "BackgroundColor": "248,161,135",
+    "KeysBackgroundColor": "255,223,213",
+    "KeysColor": "248,161,135"
+  },
+  {
+    "Id": "14",
+    "Name": "Science",
+    "Placeholder": "Science",
+    "BackgroundColor": "113,217,199",
+    "KeysBackgroundColor": "209,255,247",
+    "KeysColor": "113,217,199"
+  },
+  {
+    "Id": "15",
+    "Name": "Entertainment",
+    "Placeholder": "Entertainment",
+    "BackgroundColor": "255,144,144",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "16",
+    "Name": "Forbidden Places",
+    "Placeholder": "ForbiddenPlaces",
+    "BackgroundColor": "139,205,136",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "17",
+    "Name": "World Records",
+    "Placeholder": "WorldRecords",
+    "BackgroundColor": "139,205,136",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "18",
+    "Name": "Popular Myths",
+    "Placeholder": "PopularMyths",
+    "BackgroundColor": "242,136,136",
+    "KeysBackgroundColor": "191,113,207",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "19",
+    "Name": "Incredible Laws",
+    "Placeholder": "IncredibleLaws",
+    "BackgroundColor": "255,209,36",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "20",
+    "Name": "Exotic Tribes",
+    "Placeholder": "ExoticTribes",
+    "BackgroundColor": "255,229,157",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "21",
+    "Name": "Extraordinary Jobs",
+    "Placeholder": "ExtraordinaryJobs",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "22",
+    "Name": "Unbelievable Miracles",
+    "Placeholder": "UnbelievableMiracles",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "23",
+    "Name": "Unique Customs",
+    "Placeholder": "UniqueCustoms",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "24",
+    "Name": "Amazing Inventions",
+    "Placeholder": "AmazingInventions",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  },
+  {
+    "Id": "25",
+    "Name": "Unusual Families",
+    "Placeholder": "UnusualFamilies",
+    "BackgroundColor": "54,201,225",
+    "KeysBackgroundColor": "255,230,230",
+    "KeysColor": "255,144,144"
+  }
+]
