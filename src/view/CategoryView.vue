@@ -236,9 +236,8 @@
   
   const saveCategory = async () => {
     try {
-      // Tính ID tiếp theo
       const maxId = categories.value.length > 0 ? Math.max(...categories.value.map(cat => parseInt(cat.Id))) : 0;
-      newCategory.value.Id = (maxId + 1).toString();
+      newCategory.value.Id = maxId + 1;
   
       const response = await fetch(`${API_URL}/api/save-category`, {
         method: 'POST',

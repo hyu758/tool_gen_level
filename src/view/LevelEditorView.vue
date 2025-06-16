@@ -68,29 +68,30 @@ const categories = ref([])
 const words = ref([])
 const levels = ref([])
 const toast = useToast()
+
 onMounted(() => {
   axios.get(`${API_URL}/api/categories`)
     .then(response => {
-      categories.value = response.data;
-      console.log('Response :', response.data);
+      categories.value = response.data
+      console.log('Response categories:', response.data)
     })
-    .catch(error => console.error('Error fetching categories:', error));
+    .catch(error => console.error('Error fetching categories:', error))
 
   axios.get(`${API_URL}/api/words`)
     .then(response => {
-      words.value = response.data;
-      console.log('Response :', response.data);
+      words.value = response.data
+      console.log('Response words:', response.data)
     })
-    .catch(error => console.error('Error fetching words:', error));
+    .catch(error => console.error('Error fetching words:', error))
 
   axios.get(`${API_URL}/api/max-level-id`)
     .then(response => {
-      nextId.value = response.data.maxId;
+      nextId.value = response.data.maxId
     })
     .catch(error => {
-      console.error('Error fetching max level ID:', error);
-      nextId.value = 1;
-    });
+      console.error('Error fetching max level ID:', error)
+      nextId.value = 1
+    })
 })
 
 const step = ref(1)
@@ -99,7 +100,7 @@ const fullPhrase = ref('')
 const copyright = ref('')
 const wordCount = ref(1)
 const selectedCategoryId = ref('')
-const nextId = ref(1)
+const nextId = ref(1) // Sử dụng kiểu number trực tiếp thay vì chuỗi
 
 const remainingLetters = ref(new Set())
 const priorityCandidates = reactive(new Map())
@@ -119,94 +120,94 @@ const canInit = computed(() =>
 )
 
 function toBitmask(str) {
-  let mask = 0;
+  let mask = 0
   for (let char of str.toUpperCase().replace(/[^A-Z]/g, '')) {
-    const index = char.charCodeAt(0) - 'A'.charCodeAt(0);
-    mask |= (1 << index);
+    const index = char.charCodeAt(0) - 'A'.charCodeAt(0)
+    mask |= (1 << index)
   }
-  return mask;
+  return mask
 }
 
 function countBits(mask) {
-  let count = 0;
+  let count = 0
   while (mask) {
-    count += mask & 1;
-    mask >>= 1;
+    count += mask & 1
+    mask >>= 1
   }
-  return count;
+  return count
 }
 
 function initGenerator() {
-  const chars = phraseSymbolList.value.toUpperCase().replace(/[^A-Z]/g, '');
-  remainingLetters.value = new Set(chars);
-  const firstCountLetters = remainingLetters.value.size;
-  const phraseMask = toBitmask(chars);
-  
-  console.log("Phrase mask:", phraseMask.toString(2));
-  console.log("First count letters:", firstCountLetters);
+  const chars = phraseSymbolList.value.toUpperCase().replace(/[^A-Z]/g, '')
+  remainingLetters.value = new Set(chars)
+  const firstCountLetters = remainingLetters.value.size
+  const phraseMask = toBitmask(chars)
 
-  priorityCandidates.clear();
-  backupCandidates.clear();
+  console.log('Phrase mask:', phraseMask.toString(2))
+  console.log('First count letters:', firstCountLetters)
+
+  priorityCandidates.clear()
+  backupCandidates.clear()
   words.value.forEach(w => {
-    const wordMask = toBitmask(w.WordSymbolList);
+    const wordMask = toBitmask(w.WordSymbolList)
     if ((wordMask & phraseMask) === wordMask) {
-      const overlap = countBits(wordMask);
-      const threshold = Math.ceil(firstCountLetters / 3.0);
+      const overlap = countBits(wordMask)
+      const threshold = Math.ceil(firstCountLetters / 3.0)
       if (overlap >= threshold) {
         priorityCandidates.set(w.WordSymbolList, {
           Word: w.WordSymbolList,
           Mask: wordMask,
           Weight: w.Weight,
           Definitions: w.Definitions
-        });
+        })
       } else {
         backupCandidates.set(w.WordSymbolList, {
           Word: w.WordSymbolList,
           Mask: wordMask,
           Weight: w.Weight,
           Definitions: w.Definitions
-        });
+        })
       }
     }
-  });
-  chosenWords.value = [];
-  console.log("Priority candidates size:", priorityCandidates.size);
-  console.log("Backup candidates size:", backupCandidates.size);
-  step.value = 2;
-  pickNext();
+  })
+  chosenWords.value = []
+  console.log('Priority candidates size:', priorityCandidates.size)
+  console.log('Backup candidates size:', backupCandidates.size)
+  step.value = 2
+  pickNext()
 }
 
 function computeBest() {
-  let best = null;
-  let maxNewCov = 0;
-  let maxWeight = 0;
-  const candidatesToCheck = priorityCandidates.size > 0 ? priorityCandidates : backupCandidates;
-  const remainingMask = toBitmask(Array.from(remainingLetters.value).join(''));
+  let best = null
+  let maxNewCov = 0
+  let maxWeight = 0
+  const candidatesToCheck = priorityCandidates.size > 0 ? priorityCandidates : backupCandidates
+  const remainingMask = toBitmask(Array.from(remainingLetters.value).join(''))
   candidatesToCheck.forEach(c => {
-    const newCov = countBits(c.Mask & remainingMask);
+    const newCov = countBits(c.Mask & remainingMask)
     if (newCov > 0 || remainingLetters.value.size === 0) {
       if (newCov > maxNewCov || (newCov === maxNewCov && c.Weight > maxWeight)) {
-        maxNewCov = newCov;
-        maxWeight = c.Weight;
-        best = c;
+        maxNewCov = newCov
+        maxWeight = c.Weight
+        best = c
       }
     }
-  });
-  return best;
+  })
+  return best
 }
 
 function pickNext() {
   if (chosenWords.value.length >= wordCount.value && remainingLetters.value.size === 0) {
-    currentCandidate.value = null;
-    return;
+    currentCandidate.value = null
+    return
   }
-  const b = computeBest();
+  const b = computeBest()
   if (b) {
-    currentCandidate.value = b;
-    currentDefinitions.value = b.Definitions;
-    selectedDefinition.value = '';
+    currentCandidate.value = b
+    currentDefinitions.value = b.Definitions
+    selectedDefinition.value = ''
   } else {
-    currentCandidate.value = null;
+    currentCandidate.value = null
   }
 }
 
@@ -214,79 +215,79 @@ function confirmPick() {
   chosenWords.value.push({
     WordSymbolList: currentCandidate.value.Word,
     Description: selectedDefinition.value
-  });
-  const wordMask = currentCandidate.value.Mask;
-  let remainingMask = toBitmask(Array.from(remainingLetters.value).join(''));
-  remainingMask &= ~wordMask;
+  })
+  const wordMask = currentCandidate.value.Mask
+  let remainingMask = toBitmask(Array.from(remainingLetters.value).join(''))
+  remainingMask &= ~wordMask
   remainingLetters.value = new Set(
     Array.from({ length: 26 }, (_, i) => String.fromCharCode('A'.charCodeAt(0) + i))
       .filter(char => (remainingMask & (1 << (char.charCodeAt(0) - 'A'.charCodeAt(0)))) !== 0)
-  );
+  )
   if (priorityCandidates.has(currentCandidate.value.Word)) {
-    priorityCandidates.delete(currentCandidate.value.Word);
+    priorityCandidates.delete(currentCandidate.value.Word)
   } else {
-    backupCandidates.delete(currentCandidate.value.Word);
+    backupCandidates.delete(currentCandidate.value.Word)
   }
   if (chosenWords.value.length >= wordCount.value && remainingLetters.value.size === 0) {
-    currentCandidate.value = null;
+    currentCandidate.value = null
   } else {
-    pickNext();
+    pickNext()
   }
 }
 
 function finish() {
   if (remainingLetters.value.size > 0) {
-    alert('Warning: Not all letters are covered by the selected words.');
+    alert('Warning: Not all letters are covered by the selected words.')
   }
-  step.value = 3;
+  step.value = 3
 }
 
 const outputJson = computed(() => JSON.stringify({
-  Id: nextId.value.toString(),
+  Id: nextId.value,
   PhraseSymbolList: phraseSymbolList.value,
   FullPhrase: fullPhrase.value,
   CategoryId: selectedCategoryId.value,
   Copyright: copyright.value,
   Words: chosenWords.value
-}, null, 2));
+}, null, 2))
 
 function saveLevel() {
   const newLevel = {
-    Id: nextId.value.toString(),
+    Id: nextId.value,
     PhraseSymbolList: phraseSymbolList.value,
     FullPhrase: fullPhrase.value,
     CategoryId: selectedCategoryId.value,
     Copyright: copyright.value,
     Words: chosenWords.value
-  };
+  }
   axios.post(`${API_URL}/api/save-level`, newLevel)
     .then(response => {
-      console.log(response.data);
+      console.log('Save response:', response.data)
       if (response.status === 201) {
         toast.success('Level saved successfully!', {
           position: 'top-right',
           duration: 3000
-        });
-        nextId.value += 1;
-        reset();
+        })
+        nextId.value += 1
+        reset()
       }
     })
     .catch(error => {
-      console.error('Error saving level:', error);
+      console.error('Error saving level:', error)
       toast.error('Failed to save level. Please try again.', {
         position: 'top-right',
         duration: 3000
-      });
-    });
+      })
+    })
 }
 
 function reset() {
-  step.value = 1;
-  phraseSymbolList.value = '';
-  fullPhrase.value = '';
-  copyright.value = '';
-  wordCount.value = 1;
-  selectedCategoryId.value = '';
-  chosenWords.value = [];
+  step.value = 1
+  phraseSymbolList.value = ''
+  fullPhrase.value = ''
+  copyright.value = ''
+  wordCount.value = 1
+  selectedCategoryId.value = ''
+  chosenWords.value = []
 }
 </script>
