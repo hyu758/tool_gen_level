@@ -121,6 +121,8 @@
   const categories = ref([])
   const currentPage = ref(1)
   const itemsPerPage = ref(10)
+  const API_URL = import.meta.env.VITE_API_URL
+
   
   const newCategory = ref({
     Id: '',
@@ -137,7 +139,6 @@
     keysColor: '#E983FF'
   })
   
-  // Pagination computed properties
   const totalItems = computed(() => categories.value.length)
   const totalPages = computed(() => Math.ceil(totalItems.value / itemsPerPage.value))
   const startIndex = computed(() => (currentPage.value - 1) * itemsPerPage.value)
@@ -175,7 +176,6 @@
     return rangeWithDots
   })
   
-  // Pagination methods
   const changePage = (page) => {
     if (page >= 1 && page <= totalPages.value) {
       currentPage.value = page
@@ -186,7 +186,6 @@
     currentPage.value = 1
   }
   
-  // Color conversion functions
   const hexToRgb = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
     return result ? 
@@ -202,7 +201,6 @@
     }).join('')
   }
   
-  // Color update functions
   const updateBackgroundColor = () => {
     newCategory.value.BackgroundColor = hexToRgb(colors.value.backgroundColor)
   }
@@ -215,7 +213,6 @@
     newCategory.value.KeysColor = hexToRgb(colors.value.keysColor)
   }
   
-  // Watch for changes that might affect pagination
   watch([() => categories.value.length, itemsPerPage], () => {
     const maxPage = Math.ceil(categories.value.length / itemsPerPage.value)
     if (currentPage.value > maxPage) {
@@ -229,7 +226,7 @@
     colors.value.keysColor = rgbToHex(newCategory.value.KeysColor)
     
     try {
-      const response = await fetch('http://localhost:3000/api/categories')
+      const response = await fetch(`${API_URL}/api/categories`)
       categories.value = await response.json()
     } catch (error) {
       console.error('Error fetching categories:', error)
@@ -243,7 +240,7 @@
       const maxId = categories.value.length > 0 ? Math.max(...categories.value.map(cat => parseInt(cat.Id))) : 0;
       newCategory.value.Id = (maxId + 1).toString();
   
-      const response = await fetch('http://localhost:3000/api/save-category', {
+      const response = await fetch(`${API_URL}/api/save-category`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

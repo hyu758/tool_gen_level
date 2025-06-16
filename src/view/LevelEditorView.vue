@@ -62,29 +62,28 @@
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useToast } from 'vue-toast-notification'
 import axios from 'axios'
+const API_URL = import.meta.env.VITE_API_URL
 
 const categories = ref([])
 const words = ref([])
 const levels = ref([])
 const toast = useToast()
 onMounted(() => {
-  axios.get('http://localhost:3000/api/categories')
+  axios.get(`${API_URL}/api/categories`)
     .then(response => {
       categories.value = response.data;
       console.log('Response :', response.data);
     })
     .catch(error => console.error('Error fetching categories:', error));
 
-  // Lấy danh sách words từ API với axios
-  axios.get('http://localhost:3000/api/words')
+  axios.get(`${API_URL}/api/words`)
     .then(response => {
       words.value = response.data;
       console.log('Response :', response.data);
     })
     .catch(error => console.error('Error fetching words:', error));
 
-  // Lấy max level ID từ API với axios
-  axios.get('http://localhost:3000/api/max-level-id')
+  axios.get(`${API_URL}/api/max-level-id`)
     .then(response => {
       nextId.value = response.data.maxId;
     })
@@ -260,7 +259,7 @@ function saveLevel() {
     Copyright: copyright.value,
     Words: chosenWords.value
   };
-  axios.post('http://localhost:3000/api/save-level', newLevel)
+  axios.post(`${API_URL}/api/save-level`, newLevel)
     .then(response => {
       console.log(response.data);
       if (response.status === 201) {
